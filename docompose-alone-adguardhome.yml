@@ -1,3 +1,7 @@
+# Created by @ciprianiacobesc 
+# Use it with portainer or use it as is. 
+# Extra block lists https://cyberhost.uk/malware-blocklists-pi-hole-adguard-home/ 
+
 version: "2.4"
 services:
   adguardhome:
@@ -18,6 +22,7 @@ services:
       - adguardhome_volume_c_${POSTFIX:-0}:/opt/adguardhome/conf
     restart: unless-stopped
     
-#volumes:
-#  adguardhome_volume_w_${POSTFIX:-0}:
-#  adguardhome_volume_c_${POSTFIX:-0}:
+# For portainer manually change the values bellow as ex    adguardhome_volume_w_0 or adguardhome_volume_w_1 depending on you POSTFIX value 
+volumes:
+  adguardhome_volume_w_${POSTFIX:-0}:
+  adguardhome_volume_c_${POSTFIX:-0}:
