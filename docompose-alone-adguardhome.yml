@@ -18,6 +18,6 @@ services:
       - adguardhome_volume_c_${POSTFIX:-0}:/opt/adguardhome/conf
     restart: unless-stopped
     
-volumes:
-  adguardhome_volume_w_${POSTFIX:-0}:
-  adguardhome_volume_c_${POSTFIX:-0}:
+#volumes:
+#  adguardhome_volume_w_${POSTFIX:-0}:
+#  adguardhome_volume_c_${POSTFIX:-0}:
